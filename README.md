@@ -8,7 +8,7 @@ A full-stack travel and destination booking web application where users can expl
 
 ## Overview
 
-Wanderlust was built to practice real-world full-stack architecture—connecting a modern Next.js (App Router) client with an independently deployed Express.js backend and MongoDB Atlas database. Instead of keeping everything tightly coupled in one server, authentication is handled with Better Auth (supporting both credentials and Google OAuth), while protected API requests between the frontend and backend are secured using JWT bearer tokens.
+Wanderlust was built to practice real-world full-stack architecture—connecting a modern Next.js (App Router) client with an independently deployed Express.js backend and MongoDB Atlas database. Instead of keeping everything tightly coupled in one server, authentication is handled with Better Auth (supporting both credentials, Google OAuth and GitHub OAuth), while protected API requests between the frontend and backend are secured using JWT bearer tokens.
 
 ---
 
@@ -19,7 +19,7 @@ Wanderlust was built to practice real-world full-stack architecture—connecting
 - **Booking Management:** Book travel destinations and view or cancel active reservations from the **My Bookings** dashboard.
 - **Authentication & Route Protection:**
   - Email/Password sign-up and login
-  - Google OAuth integration
+  - Google and GutHub OAuth integration
   - Route protection via Next.js middleware (`proxy.ts`)
   - User profile view with secure sign-out and automatic redirect
 - **Responsive UI & Feedback:** Clean, mobile-friendly interface styled with Tailwind CSS and shadcn/ui, paired with real-time toast notifications for user actions.
@@ -31,7 +31,7 @@ Wanderlust was built to practice real-world full-stack architecture—connecting
 | Layer | Technologies |
 | :--- | :--- |
 | **Frontend** | Next.js (App Router, Turbopack), React, TypeScript, Tailwind CSS, shadcn/ui, React Toastify |
-| **Authentication** | Better Auth, JWT (Bearer Token), Google OAuth |
+| **Authentication** | Better Auth, JWT (Bearer Token), Google OAuth, GitHub OAuth |
 | **Backend** | Node.js, Express.js, REST API |
 | **Database** | MongoDB (MongoDB Atlas) |
 | **Deployment** | Vercel (separate deployments for frontend and backend) |
@@ -58,7 +58,7 @@ Building and shipping a decoupled full-stack app brought up a few practical hurd
 ### 1. Clone the repository
 
 ```bash
-git clone [https://github.com/BonyAminAIUB/wanderlust-full-stack-project.git](https://github.com/BonyAminAIUB/wanderlust-full-stack-project.git)
+git clone https://github.com/BonyAminAIUB/wanderlust-full-stack-project.git
 cd wanderlust-full-stack-project
 ```
 
@@ -100,6 +100,8 @@ BETTER_AUTH_SECRET=your_better_auth_secret
 MONGODB_URI=your_mongodb_atlas_connection_string
 GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
+GITHUB_CLIENT_ID=your_github_client_id
+GITHUB_CLIENT_SECRET=your_github_client_secret
 ```
 
 Run the development server:
